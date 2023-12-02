@@ -10,6 +10,8 @@ SNOWFLAKE_WAREHOUSE = compute_wh<br>
 SNOWFLAKE_DATABASE = snowpark<br>
 SNOWFLAKE_SCHEMA = titanic<br>
 
+Use the environment.yml file to create a python environment for the demo <br>
+
 Run the load_data notebook which will perform the following tasks <br>
 - Load Titanic dataset from Seaborn, uppercase the column names and convert to csv
 - Put the CSV file into a Snowflake Internal Stage
