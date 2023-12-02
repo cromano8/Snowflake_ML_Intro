@@ -1,0 +1,12 @@
+name: Intro_SnowML
+channels:
+  - https://repo.anaconda.com/pkgs/snowflake
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - pre-commit
+  - seaborn
+  - snowflake-snowpark-python[pandas]
+  - snowflake-ml-python
