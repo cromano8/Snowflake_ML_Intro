@@ -11,6 +11,10 @@ SNOWFLAKE_DATABASE = snowpark<br>
 SNOWFLAKE_SCHEMA = titanic<br>
 
 ## Use the environment.yml file to create a python environment for the demo <br>
+examples in the terminal <br>
+- conda env create -f environment.yml <br>
+- micromamba create -n from_file -f environment.yml -c conda-forge <br>
+
 
 ## Run the load_data notebook which will perform the following tasks <br>
 - Load Titanic dataset from Seaborn, uppercase the column names and convert to csv
