@@ -11,7 +11,7 @@ SNOWFLAKE_DATABASE = snowpark<br>
 SNOWFLAKE_SCHEMA = titanic<br>
 
 ## Use the environment.yml file to create a python environment for the demo <br>
-examples in the terminal <br>
+Examples in the terminal <br>
 - conda env create -f environment.yml <br>
 - micromamba create -n from_file -f environment.yml -c conda-forge <br>
 
