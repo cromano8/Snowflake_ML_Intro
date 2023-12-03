@@ -1,4 +1,9 @@
-# Introduction to using Snowflake for datascience
+# Introduction to using Snowflake for datascience <br>
+### video <br>
+https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/c249ce4c-2494-49ba-8142-6aec21cc4b08 <>
+
+
+
 
 ## Create a .env file and include the following filling in your account URL/Username/Password<br>
 
