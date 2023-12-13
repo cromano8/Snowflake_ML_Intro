@@ -7,4 +7,5 @@ dependencies:
   - pre-commit
   - seaborn
   - snowflake-snowpark-python[pandas]
-  - snowflake-ml-python
+  - pip:
+    - snowflake-ml-python # temporary till it's in the Snowflake conda channel
