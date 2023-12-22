@@ -1,4 +1,4 @@
-# Master Snowflake for Data Science
+# Snowflake for Data Science
 
 ### Getting Started
 
