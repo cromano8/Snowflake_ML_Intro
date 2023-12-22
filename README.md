@@ -47,3 +47,7 @@ Examples in the terminal
 - Split into Test & Train
 - Train an XGBOOST Classifier Model with gridsearch and hyperparameters
 - Return Accuracy and best parameters
+- Register the model in the model registry
+- Deploy the model as a vectorized UDF
+- Perform batch predictions on a table
+- Perform real time predictions using Streamlit
