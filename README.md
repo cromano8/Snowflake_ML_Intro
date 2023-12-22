@@ -1,28 +1,30 @@
 # Introduction to using Snowflake for datascience
 
-## Create a .env file and include the following filling in your account URL/Username/Password<br>
+## Create a .env file and include the following filling in your account URL/Username/Password
 
-SNOWFLAKE_ACCOUNT = abc123.us-east-1<br>
-SNOWFLAKE_USER = username<br>
-SNOWFLAKE_PASSWORD = yourpassword<br>
-SNOWFLAKE_ROLE = sysadmin<br>
-SNOWFLAKE_WAREHOUSE = compute_wh<br>
-SNOWFLAKE_DATABASE = snowpark<br>
-SNOWFLAKE_SCHEMA = titanic<br>
+```
+SNOWFLAKE_ACCOUNT = abc123.us-east-1
+SNOWFLAKE_USER = username
+SNOWFLAKE_PASSWORD = yourpassword
+SNOWFLAKE_ROLE = sysadmin
+SNOWFLAKE_WAREHOUSE = compute_wh
+SNOWFLAKE_DATABASE = snowpark
+SNOWFLAKE_SCHEMA = titanic
+```
 
-## Use the environment.yml file to create a python environment for the demo <br>
-Examples in the terminal <br>
-- conda env create -f environment.yml <br>
-- micromamba create -n from_file -f environment.yml -c conda-forge <br>
+## Use the environment.yml file to create a Python environment for the demo
+Examples in the terminal
+- `conda env create -f environment.yml`
+- `micromamba create -f environment.yml -y`
 
 
-## Run the load_data notebook which will perform the following tasks <br>
+## Run the load_data notebook which will perform the following tasks
 - Load Titanic dataset from Seaborn, uppercase the column names and convert to csv
 - Put the CSV file into a Snowflake Internal Stage
 - Create a Snowpark DataFrame from the CSV in the stage
 - Write the Snowpark DataFrame to Snowflake as a table <br>
 
-## Run the snowml notebook which will perform the following tasks <br>
+## Run the snowml notebook which will perform the following tasks
 - Create a Snowpark DataFrame from the Titanic table
 - Check Null values
 - drop columns with high count of nulls
@@ -45,4 +47,3 @@ Examples in the terminal <br>
 - Split into Test & Train
 - Train an XGBOOST Classifier Model with gridsearch and hyperparameters
 - Return Accuracy and best parameters
-
