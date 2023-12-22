@@ -33,3 +33,6 @@ Examples in the terminal <br>
 - Train an XGBOOST Classifier Model
 - Perform predictions on test
 - Return Accuracy, Precision, and Recall
+
+# End to End MLOps with live/batch inference and Streamlit
+
