@@ -35,4 +35,14 @@ Examples in the terminal <br>
 - Return Accuracy, Precision, and Recall
 
 # End to End MLOps with live/batch inference and Streamlit
+### After running load_data instead of running the snowml notebook, this one uses the deployment notebook
+- Create a Snowpark DataFrame from the Titanic table
+- Check Null values
+- drop columns with high count of nulls, and correlated columns
+- Convert Fare datatype
+- Impute Categorical columns with nulls
+- One Hot Encode Categrocial Values
+- Split into Test & Train
+- Train an XGBOOST Classifier Model with gridsearch and hyperparameters
+- Return Accuracy and best parameters
 
