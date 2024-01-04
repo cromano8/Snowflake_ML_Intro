@@ -97,13 +97,13 @@ surv_pred = round(float(surv_pred[0][0]),2)*100
 
 st.write(f'You have a {surv_pred}''% chance of surviving the Titanic')
 
-sink_bytes_object = session.file.get_stream("@SNOWPARK.TITANIC.ML_DATA/sinking.webp.gz", decompress=True).read()
+sink_bytes_object = session.file.get_stream("@ML_DATA/sinking.webp.gz", decompress=True).read()
 sink_image64 = base64.b64encode(sink_bytes_object).decode()
 
-float_bytes_object = session.file.get_stream("@SNOWPARK.TITANIC.ML_DATA/floating.webp.gz", decompress=True).read()
+float_bytes_object = session.file.get_stream("@ML_DATA/floating.webp.gz", decompress=True).read()
 float_image64 = base64.b64encode(float_bytes_object).decode()
 
-flying_bytes_object = session.file.get_stream("@SNOWPARK.TITANIC.ML_DATA/flying.webp.gz", decompress=True).read()
+flying_bytes_object = session.file.get_stream("@ML_DATA/flying.webp.gz", decompress=True).read()
 flying_image64 = base64.b64encode(flying_bytes_object).decode()
 
 if surv_pred > 75:
