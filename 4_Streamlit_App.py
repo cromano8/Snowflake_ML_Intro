@@ -1,11 +1,11 @@
 # Copy and paste this app into an SiS app
 # Import python packages
-import streamlit as st
-from snowflake.snowpark.context import get_active_session
 from sklearn.preprocessing import OneHotEncoder
-import PIL.Image
+from snowflake.snowpark.context import get_active_session
 import base64
 import pandas as pd
+import PIL.Image
+import streamlit as st
 
 st.set_page_config(layout="wide")
 
