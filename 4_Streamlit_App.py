@@ -5,8 +5,6 @@ from snowflake.snowpark.context import get_active_session
 from sklearn.preprocessing import OneHotEncoder
 import PIL.Image
 import base64
-
-# Snowpark ML
 import pandas as pd
 
 st.set_page_config(layout="wide")
