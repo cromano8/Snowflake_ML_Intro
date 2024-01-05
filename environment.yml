@@ -7,5 +7,7 @@ dependencies:
   - pre-commit
   - seaborn
   - snowflake-snowpark-python[pandas]
+  - scikit-learn
+  - xgboost
   - pip:
     - snowflake-ml-python # temporary till it's in the Snowflake conda channel
