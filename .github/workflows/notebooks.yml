@@ -1,0 +1,38 @@
+name: Test Dependencies
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+
+      - name: Download and install Micromamba
+        run: |
+          "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+          micromamba shell init --shell bash --root-prefix=~/micromamba
+          export PATH="$HOME/micromamba/bin:$PATH"
+
+      - name: Create and activate Conda environment, and run Jupyter notebooks
+        run: |
+          micromamba create --file environment.yml --yes
+          micromamba run -n Intro_SnowML python run.py
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+          SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
+          SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+          SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}

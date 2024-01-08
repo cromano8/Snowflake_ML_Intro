@@ -4,7 +4,9 @@ channels:
 dependencies:
   - python=3.10
   - ipykernel
-  - pre-commit
+  - nbconvert
+  - nbformat
+  - python-dotenv
   - seaborn
   - snowflake-snowpark-python[pandas]
   - scikit-learn
@@ -18,4 +20,4 @@ dependencies:
   - pyyaml
   - typing-extensions
   - pip:
-    - snowflake-ml-python # temporary till it's in the Snowflake conda channel
+      - snowflake-ml-python
