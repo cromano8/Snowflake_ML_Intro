@@ -1,0 +1,33 @@
+name: Test Dependencies
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.10
+
+      - name: Install Conda
+        run: |
+          wget -qO- https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash
+          source "$HOME/miniconda3/etc/profile.d/conda.sh"
+
+      - name: Create and activate Conda environment
+        run: |
+          conda create --file environment.yml --yes
+          conda activate Intro_SnowML
+
+      - name: Run Jupyter notebooks
+        run: |
+          python run.py
