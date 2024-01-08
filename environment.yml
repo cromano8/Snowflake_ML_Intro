@@ -8,10 +8,16 @@ dependencies:
   - nbformat
   - python-dotenv
   - seaborn
-  - scikit-learn
-  - xgboost
   - snowflake-snowpark-python[pandas]
   - scikit-learn
   - xgboost
+  - absl-py
+  - anyio
+  - cloudpickle
+  - numpy
+  - packaging
+  - pandas
+  - pyyaml
+  - typing-extensions
   - pip:
       - snowflake-ml-python
