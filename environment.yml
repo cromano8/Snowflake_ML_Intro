@@ -6,10 +6,16 @@ dependencies:
   - ipykernel
   - pre-commit
   - seaborn
-  - scikit-learn
-  - xgboost
   - snowflake-snowpark-python[pandas]
   - scikit-learn
   - xgboost
+  - absl-py
+  - anyio
+  - cloudpickle
+  - numpy
+  - packaging
+  - pandas
+  - pyyaml
+  - typing-extensions
   - pip:
     - snowflake-ml-python # temporary till it's in the Snowflake conda channel
