@@ -9,7 +9,7 @@
 - 🔗 **Regular 30-Day Trial:** [Sign Up](https://signup.snowflake.com/)
 - 🔗 **Student/Educator 120-Day Trial:** [Sign Up (Student)](https://signup.snowflake.com/?trial=student)
 
-Although we recorded videos, we are constantly making upgrades and additions to this repo, so the videos may differ slightly from what the repo but overall are the same.  We will continue to upload more videos on any additions to the repo.
+Although we recorded videos, we are constantly making upgrades and additions to this repo, so the videos may differ slightly from what is in the repo.  Overall they are the same but we will continue to upload more videos on any additions to the repo.
 
 ## Configuration Setup
 
