@@ -23,20 +23,20 @@ test_2 = load_data('titanic_shell')
 col1, col2, col3= st.columns(3)
 
 with col1:
-    pclass = st.selectbox('What class is your ticket?', 
+    pclass = st.selectbox('What class is your ticket?',
                        ['FIRST', 'SECOND', 'THIRD'])
-    town = st.selectbox('What town did you embark from?', 
+    town = st.selectbox('What town did you embark from?',
                ['SOUTHAMPTON', 'CHERBOURG', 'QUEENSTOWN'])
-    
+
 with col2:
-    fare = st.number_input('What was the cost of your ticket?', 
+    fare = st.number_input('What was the cost of your ticket?',
                                min_value=0.00, max_value=512.00, value=50.00)
     who = st.selectbox('Are you a Man, Woman, or Child?',
                        ('MAN', 'WOMAN','CHILD'))
 with col3:
-    sibsp = st.number_input('How many siblings/spouses are traveling with you?', 
+    sibsp = st.number_input('How many siblings/spouses are traveling with you?',
                               min_value=0, max_value=8, value=0,step=1)
-    parch = st.number_input('How many parents/children are traveling with you?', 
+    parch = st.number_input('How many parents/children are traveling with you?',
                               min_value=0, max_value=6, value=0, step=1)
 
 
@@ -72,7 +72,7 @@ SIBSP = titanic_df['SIBSP'][0]
 PARCH = titanic_df['PARCH'][0]
 FARE = titanic_df['FARE'][0]
 
-surv_pred = session.sql(f''' 
+surv_pred = session.sql(f'''
 select
 survival_pred_proba(object_construct(
 'CLASS_SECOND', {CLASS_SECOND},
@@ -114,4 +114,3 @@ else:
     st.image(
         f'data:image/gif;base64,{sink_image64}')
     st.write('I would NOT get on this boat')
-    
