@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - dev
+    paths:
+      - '**/*.ipynb'
 
 jobs:
   build:
@@ -24,7 +26,7 @@ jobs:
           micromamba shell init --shell bash --root-prefix=~/micromamba
           export PATH="$HOME/micromamba/bin:$PATH"
 
-      - name: Create and activate Conda environment, and run Jupyter notebooks
+      - name: Create Micromamba environment and run Jupyter notebooks
         run: |
           micromamba create --file environment.yml --yes
           micromamba run -n Intro_SnowML python run.py
