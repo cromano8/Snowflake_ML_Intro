@@ -31,7 +31,7 @@ Although we recorded videos, we are constantly making upgrades and additions to 
         - `micromamba create -f environment.yml -y`
         - 
 Why we partner with Anaconda
-![Screenshot 2024-01-10 at 11 12 58 AM](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/ced5f5da-99bc-429b-8f53-c4a6098234fd)
+![Screenshot 2024-01-10 at 11 12 58 AM](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/ced5f5da-99bc-429b-8f53-c4a6098234fd = 100 x 20)
 
 ## Data Processing & ML Operations
 
