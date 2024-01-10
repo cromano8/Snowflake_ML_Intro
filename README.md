@@ -32,7 +32,8 @@ Although we recorded videos, we are constantly making upgrades and additions to 
         - 
 Why we partner with Anaconda
 
-<img src="https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/ced5f5da-99bc-429b-8f53-c4a6098234fd" alt="Image" width="50%" height="50%">
+<img src="https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/8ebc0c29-e1fd-459f-b564-535e970b0732" alt="Image" width="60%" height="60%">
+
 
 ## Data Processing & ML Operations
 
