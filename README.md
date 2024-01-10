@@ -29,10 +29,10 @@ Although we recorded videos, we are constantly making upgrades and additions to 
     - Examples in the terminal:
         - `conda env create -f environment.yml`
         - `micromamba create -f environment.yml -y`
-        - 
+
 Why we partner with Anaconda
 
-<img src="https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/8ebc0c29-e1fd-459f-b564-535e970b0732" alt="Image" width="60%" height="60%">
+<img src="https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/8ebc0c29-e1fd-459f-b564-535e970b0732" alt="Image" width="80%" height="80%">
 
 
 ## Data Processing & ML Operations
