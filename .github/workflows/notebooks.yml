@@ -7,6 +7,8 @@ on:
       - dev
     paths:
       - '**/*.ipynb'
+      - 'environment.yml'
+      - 'run.py'
 
 jobs:
   build:
