@@ -19,4 +19,5 @@ dependencies:
   - pandas
   - pyyaml
   - typing-extensions
-      - snowflake-ml-python
+  - pip:
+    - snowflake-ml-python
