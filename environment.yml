@@ -1,4 +1,4 @@
-name: SnowML_Intro
+name: Intro_SnowML
 channels:
   - https://repo.anaconda.com/pkgs/snowflake
 dependencies:
