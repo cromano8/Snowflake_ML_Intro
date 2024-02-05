@@ -1,8 +1,8 @@
-name: Intro_SnowML
+name: SnowML_Intro
 channels:
   - https://repo.anaconda.com/pkgs/snowflake
 dependencies:
-  - python=3.9
+  - python==3.10
   - ipykernel
   - nbconvert
   - nbformat

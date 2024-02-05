@@ -114,17 +114,17 @@ FARE = titanic_df["FARE"][0]
 surv_pred = session.sql(
     f"""
 select
-survival_pred_proba(object_construct(
-'CLASS_SECOND', {CLASS_SECOND},
-'CLASS_THIRD', {CLASS_THIRD},
-'WHO_MAN', {WHO_MAN},
-'WHO_WOMAN', {WHO_WOMAN},
-'EMBARK_TOWN_QUEENSTOWN', {EMBARK_TOWN_QUEENSTOWN},
-'EMBARK_TOWN_SOUTHAMPTON', {EMBARK_TOWN_SOUTHAMPTON},
-'SIBSP', {SIBSP},
-'PARCH', {PARCH},
-'FARE', {FARE}
-)):output_feature_1 AS surv_prob
+TITANIC!predict_proba(
+{CLASS_SECOND},
+{CLASS_THIRD},
+{WHO_MAN},
+{WHO_WOMAN},
+{EMBARK_TOWN_QUEENSTOWN},
+{EMBARK_TOWN_SOUTHAMPTON},
+{SIBSP},
+{PARCH},
+{FARE}
+):output_feature_1 AS surv_prob
 """
 ).collect()
 
