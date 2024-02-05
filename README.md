@@ -34,6 +34,13 @@ Why we partner with Anaconda
 
 <img src="https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/8ebc0c29-e1fd-459f-b564-535e970b0732" alt="Image" width="80%" height="80%">
 
+Quick showcase of benefits
+
+Local run time 8 min 27 seconds
+![Screenshot 2024-02-05 at 10 13 50 AM](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/7721cbc8-3fff-4fb4-9767-c3aadf1ac239)
+
+SnowflakeML run time 1 min 17 seconds (6.5x improvement in speed leveraging a Large WH)
+![Screenshot 2024-02-05 at 10 16 43 AM](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/6b30e9b0-a47e-4558-aa98-05d71cf01802)
 
 ## Data Processing & ML Operations
 
