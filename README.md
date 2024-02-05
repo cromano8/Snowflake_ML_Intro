@@ -36,7 +36,7 @@ Why we partner with Anaconda
 
 Review of distributed Hyperparameter tuning benefits
 
-Local run time 8 min 27 seconds
+Local run time 8 min 27 seconds <br>
 
 ![Screenshot 2024-02-05 at 10 13 50 AM](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/7721cbc8-3fff-4fb4-9767-c3aadf1ac239)
 
