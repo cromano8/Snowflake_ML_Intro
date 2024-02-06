@@ -5,7 +5,7 @@
 ### Getting Started
 
 - 🎥 **Intro Video Walkthrough:** [Snowflake for ML Intro](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/c249ce4c-2494-49ba-8142-6aec21cc4b08)
-- 🎥 **Advanced MLops Video Walkthrough:** [Snowflake for MLOps](https://github.com/cromano8/Snowflake_ML_Intro/assets/59093254/38c0eede-eb23-4971-99d8-425c7f9bfa4d)
+- 🎥 **End-to-End ML Ops in Snowflake:** [Live: End-to-End ML Ops in Snowflake](https://www.youtube.com/watch?v=prA014tFRwY)
 - 🔗 **Regular 30-Day Trial:** [Sign Up](https://signup.snowflake.com/)
 - 🔗 **Student/Educator 120-Day Trial:** [Sign Up (Student)](https://signup.snowflake.com/?trial=student)
 
