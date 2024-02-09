@@ -1,8 +1,6 @@
 # Copy and paste this app into an SiS app
 # Import python packages
-from snowflake.snowpark.context import get_active_session
-from snowflake.ml.utils.connection_params import SnowflakeLoginOptions
-from snowflake.snowpark import Session
+
 import base64
 import pandas as pd
 import streamlit as st
@@ -12,8 +10,13 @@ st.set_page_config(layout="wide")
 
 # Get the current credentials, locally or in SiS
 if sys._xoptions["snowflake_import_directory"]:
+    from snowflake.snowpark.context import get_active_session
+
     session = get_active_session()
 else:
+    from snowflake.ml.utils.connection_params import SnowflakeLoginOptions
+    from snowflake.snowpark import Session
+
     session = Session.builder.configs(SnowflakeLoginOptions()).getOrCreate()
 
 st.title("Will you survive the titanic?")
@@ -41,8 +44,7 @@ def load_images():
 
 @st.cache_data
 def load_data(df):
-    test_2 = session.table(df).to_pandas()
-    return test_2
+    return session.table(df).to_pandas()
 
 
 test_2 = load_data("test_data")
