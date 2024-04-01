@@ -1,10 +1,11 @@
 # Copy and paste this app into an SiS app
-# Import python packages
+# Import python packages and add snowflake-ml-python to the package list
 
 import base64
 import pandas as pd
 import streamlit as st
 import sys
+from snowflake.ml.registry import Registry
 
 st.set_page_config(layout="wide")
 
@@ -40,6 +41,12 @@ def load_images():
     flying_image64 = base64.b64encode(flying_bytes_object).decode()
 
     return dict(sink=sink_image64, float=float_image64, fly=flying_image64)
+
+@st.cache_resource
+def get_model_version():
+    reg = Registry(session=session)
+    m = reg.get_model("titanic")
+    return m.default
 
 
 @st.cache_data
@@ -113,24 +120,12 @@ SIBSP = titanic_df["SIBSP"][0]
 PARCH = titanic_df["PARCH"][0]
 FARE = titanic_df["FARE"][0]
 
-surv_pred = session.sql(
-    f"""
-select
-TITANIC!predict_proba(
-{CLASS_SECOND},
-{CLASS_THIRD},
-{WHO_MAN},
-{WHO_WOMAN},
-{EMBARK_TOWN_QUEENSTOWN},
-{EMBARK_TOWN_SOUTHAMPTON},
-{SIBSP},
-{PARCH},
-{FARE}
-):output_feature_1 AS surv_prob
-"""
-).collect()
+mv = get_model_version()
 
-surv_pred = round(float(surv_pred[0][0]) * 100, 2)
+predictions = mv.run(function_name="predict_proba", X=titanic_df)
+surv_pred = predictions['output_feature_1'][0]
+
+surv_pred = round(float(surv_pred) * 100, 2)
 
 st.metric(value=f"{surv_pred}%", label="Chance of surviving the Titanic")
 
