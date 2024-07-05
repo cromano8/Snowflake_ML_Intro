@@ -1,6 +1,8 @@
-name: Intro_SnowML
+name: snowflake_ml
 channels:
-  - https://repo.anaconda.com/pkgs/snowflake
+  - anaconda # For most packages
+  - https://repo.anaconda.com/pkgs/snowflake # For Snowflake Specific
+  - conda-forge # For DVC and Dagshub
 dependencies:
   - python=3.10
   - ipykernel
@@ -20,3 +22,7 @@ dependencies:
   - pyyaml
   - typing-extensions
   - snowflake-ml-python
+  - dvc
+  - pip
+  - pip:
+    - dagshub
